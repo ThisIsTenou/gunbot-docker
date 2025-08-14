@@ -1,0 +1,18 @@
+services:
+
+  gunbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./data:/opt/gunthy
+    ports:
+       - "8080:8080"
+    environment:
+      GUNTHY_UPDATE_ON_START: "false"
+      GUNTHY_GUI_START: "true"
+      GUNTHY_GUI_PORT: "8080"
+      GUNTHY_GUI_HTTPS: "false"
+      #GUNTHY_GUI_KEY: "/opt/gunthy/ssl/key.pem"
+      #GUNTHY_GUI_CERT: "/opt/gunthy/ssl/cert.pem"
