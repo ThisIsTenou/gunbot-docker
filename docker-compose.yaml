@@ -14,5 +14,5 @@ services:
       GUNTHY_GUI_START: "true"
       GUNTHY_GUI_PORT: "8080"
       GUNTHY_GUI_HTTPS: "false"
-      #GUNTHY_GUI_KEY: "/opt/gunthy/ssl/key.pem"
-      #GUNTHY_GUI_CERT: "/opt/gunthy/ssl/cert.pem"
+      GUNTHY_GUI_KEY: "server.cert" # Relative path to /opt/gunthy within the container
+      GUNTHY_GUI_CERT: "server.key" # Relative path to /opt/gunthy within the container
